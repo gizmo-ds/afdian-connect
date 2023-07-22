@@ -1,5 +1,5 @@
 import { request } from './helpers';
-import { QueryOrderResult, SponsorResult } from './types';
+import { GetProfileResult, QueryOrderResult, SponsorResult } from './types';
 
 export async function queryOrder(page: number = 1, orders?: string[] | string) {
   return await request<QueryOrderResult>(
@@ -36,6 +36,6 @@ export async function querySponsor(
 
 export async function getProfileBySlug(slug: string) {
   const u = new URL('https://afdian.net/api/user/get-profile-by-slug');
-  u.searchParams.append('slug', slug);
-  return await fetch(u.toString()).then(resp => resp.json());
+  u.searchParams.append('url_slug', slug);
+  return await fetch(u.toString()).then(resp => resp.json()) as GetProfileResult;
 }
