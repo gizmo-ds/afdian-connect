@@ -145,6 +145,7 @@ export interface GetProfileResult {
       url_slug: string;
       creator: {
         doing: string;
+        monthly_fans: number;
       };
     };
   };
