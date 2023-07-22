@@ -17,11 +17,13 @@ export default eventHandler(async e => {
   const user = profile.data.user;
   const showFans = user.creator.monthly_fans > 0 && !hideFans;
 
-  const coverUrl = await resolveAvatars(
-    [user.cover !== '' ? user.cover : user.avatar],
-    [640, 140]
+  const coverUrl = (
+    await resolveAvatars(
+      [user.cover !== '' ? user.cover : user.avatar],
+      [640, 140]
+    )
   )[0];
-  const avatarUrl = await resolveAvatars([user.avatar], [64, 64])[0];
+  const avatarUrl = (await resolveAvatars([user.avatar], [64, 64]))[0];
 
   e.node.res.appendHeader('content-type', 'image/svg+xml');
   const fontFamily = `-apple-system,Arial,Verdana,"Hiragino Sans GB","Microsoft JhengHei","Microsoft YaHei",sans-serif`;

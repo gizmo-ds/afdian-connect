@@ -37,7 +37,7 @@ export async function request<T>(u: string, params: any): Promise<T> {
   });
 }
 
-export async function resolveAvatars(urls: string[], size?: number[]) {
+export function resolveAvatars(urls: string[], size?: number[]) {
   return Promise.all(
     urls.map(async u => {
       const sizeStr =
