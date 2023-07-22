@@ -18,6 +18,12 @@ WIP
 | Vercel      | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgizmo-ds%2Fafdian-connect&env=AFDIAN_TOKEN,AFDIAN_USER_ID,AFDIAN_USER&envDescription=Token%E5%92%8CUserID%E5%8F%AF%E4%BB%A5%E5%9C%A8%E7%88%B1%E5%8F%91%E7%94%B5%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E9%9D%A2%E6%9D%BF%E8%8E%B7%E5%8F%96%2CAFDIAN_USER%E4%B8%BA%E4%B8%BB%E9%A1%B5%E7%BD%91%E5%9D%80%E5%90%8E%E9%9D%A2%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%83%A8%E5%88%86&envLink=https%3A%2F%2Fafdian.net%2Fdashboard%2Fdev) |
 | Deno Deploy | [Deploy to Deno Deploy](https://nitro.unjs.io/deploy/providers/deno)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
+环境变量:
+
+- `AFDIAN_TOKEN` - 在爱发电的 [开发者面板](https://afdian.net/dashboard/dev) 获得
+- `AFDIAN_USER_ID` - 在爱发电的 [开发者面板](https://afdian.net/dashboard/dev) 获得
+- `AFDIAN_USER` - 爱发电的 [创作设置](https://afdian.net/setting/creator) 的 `主页网址` 的能修改的部分
+
 ## 赞助宣传 SVG
 
 [![Gizmo's Profile](https://afdian-connect.deno.dev/profile.svg)](https://afdian.net/a/gizmo)
