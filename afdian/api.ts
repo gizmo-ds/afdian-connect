@@ -37,5 +37,15 @@ export async function querySponsor(
 export async function getProfileBySlug(slug: string) {
   const u = new URL('https://afdian.net/api/user/get-profile-by-slug');
   u.searchParams.append('url_slug', slug);
-  return await fetch(u.toString()).then(resp => resp.json()) as GetProfileResult;
+  return (await fetch(u.toString()).then(resp =>
+    resp.json()
+  )) as GetProfileResult;
+}
+
+export async function getProfile(user_id: string) {
+  const u = new URL('https://afdian.net/api/user/get-profile');
+  u.searchParams.append('user_id', user_id);
+  return (await fetch(u.toString()).then(resp =>
+    resp.json()
+  )) as GetProfileResult;
 }
