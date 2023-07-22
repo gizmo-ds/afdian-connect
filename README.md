@@ -42,3 +42,5 @@ WIP
 - `hide_border` - 是否隐藏边框, 默认为`false`
 - `border_color` - 边框颜色, 默认为`#c0c0c0`
 - `hide_fans` - 是否隐藏月粉丝数, 默认为`false`
+- `width` - 宽度, 默认为`640`
+- `height` - 高度, 默认为`225`
