@@ -6,7 +6,7 @@ import { fromByteArray as base64 } from 'base64-js';
 export default eventHandler(async e => {
   const query = new URL(e.node.req.url, `http://${e.node.req.headers['host']}`)
     .searchParams;
-  const slug = query.get('slug') ?? AFDIAN_USER;
+  const slug = query.get('slug') ?? query.get('username') ?? AFDIAN_USER;
   const bgColor = query.get('bg_color') ?? '#fff';
   const textColor = query.get('text_color') ?? 'rgba(0,0,0,0.8)';
   const hideBorder = query.get('hide_border') === 'true';
