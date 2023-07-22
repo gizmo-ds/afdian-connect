@@ -1,5 +1,6 @@
 import { Md5 } from 'ts-md5';
 import { AFDIAN_TOKEN } from '@/utils/secret';
+import { fromByteArray as base64 } from 'base64-js';
 
 function sign(params: Record<string, any>) {
   const signStr =
@@ -34,4 +35,17 @@ export async function request<T>(u: string, params: any): Promise<T> {
       })
       .catch(reject);
   });
+}
+
+export async function resolveAvatars(urls: string[], size?: number[]) {
+  return Promise.all(
+    urls.map(async u => {
+      const sizeStr =
+        size && size.length == 2
+          ? `?imageView2/1/w/${size[0]}/h/${size[1]}`
+          : '';
+      const data = await fetch(u + sizeStr).then(resp => resp.arrayBuffer());
+      return 'data:image/jpeg;base64,' + base64(new Uint8Array(data));
+    })
+  );
 }

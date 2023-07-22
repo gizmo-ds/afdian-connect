@@ -1,7 +1,7 @@
 import { getProfileBySlug } from '@/afdian/api';
+import { resolveAvatars } from '@/afdian/helpers';
 import { AFDIAN_USER } from '@/utils/secret';
 import { h, renderSSR } from 'nano-jsx';
-import { fromByteArray as base64 } from 'base64-js';
 
 export default eventHandler(async e => {
   const query = new URL(e.node.req.url, `http://${e.node.req.headers['host']}`)
@@ -17,14 +17,11 @@ export default eventHandler(async e => {
   const user = profile.data.user;
   const showFans = user.creator.monthly_fans > 0 && !hideFans;
 
-  const cover = await fetch(
-    (user.cover !== '' ? user.cover : user.avatar) + '?imageView2/1/w/640/h/140'
-  ).then(resp => resp.arrayBuffer());
-  const coverUrl = 'data:image/jpeg;base64,' + base64(new Uint8Array(cover));
-  const avatar = await fetch(user.avatar + '?imageView2/1/w/64/h/64').then(
-    resp => resp.arrayBuffer()
-  );
-  const avatarUrl = 'data:image/jpeg;base64,' + base64(new Uint8Array(avatar));
+  const coverUrl = await resolveAvatars(
+    [user.cover !== '' ? user.cover : user.avatar],
+    [640, 140]
+  )[0];
+  const avatarUrl = await resolveAvatars([user.avatar], [64, 64])[0];
 
   e.node.res.appendHeader('content-type', 'image/svg+xml');
   const fontFamily = `-apple-system,Arial,Verdana,"Hiragino Sans GB","Microsoft JhengHei","Microsoft YaHei",sans-serif`;
