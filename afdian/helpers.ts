@@ -2,16 +2,12 @@ import { createHash } from 'node:crypto';
 import { AFDIAN_TOKEN } from '@/utils/secret';
 
 function sign(params: Record<string, any>) {
-  const keys = Object.keys(params);
-  return createHash('md5')
-    .update(
-      `${AFDIAN_TOKEN}${keys
-        .filter(k => k !== 'sign')
-        .sort()
-        .map(k => `${k}${params[k]}`)
-        .join('')}`
-    )
-    .digest('hex');
+  const signStr = Object.keys(params)
+    .filter(k => k !== 'sign')
+    .sort()
+    .map(k => `${k}${params[k]}`)
+    .join('');
+  return createHash('md5').update(`${AFDIAN_TOKEN}${signStr}`).digest('hex');
 }
 
 export async function request<T>(u: string, params: any): Promise<T> {
