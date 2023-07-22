@@ -1,8 +1,15 @@
 {
+  "name": "afdian-connect",
   "private": true,
+  "homepage": "https://github.com/gizmo-ds/afdian-connect",
+  "author": {
+    "name": "Gizmo",
+    "url": "https://github.com/gizmo-ds"
+  },
+  "license": "MIT",
   "scripts": {
     "prepare": "npx nitropack prepare",
-    "dev": "npx nitropack dev --dotenv .env.dependencies",
+    "dev": "npx nitropack dev",
     "build": "npx nitropack build",
     "preview": "node .output/server/index.mjs"
   },
