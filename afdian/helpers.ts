@@ -1,4 +1,3 @@
-// import { createHash } from 'node:crypto';
 import { Md5 } from 'ts-md5';
 import { AFDIAN_TOKEN } from '@/utils/secret';
 
