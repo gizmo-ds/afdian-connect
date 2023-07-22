@@ -28,78 +28,8 @@ export interface SponsorResult {
 }
 
 export interface SponsorDetails {
-  sponsor_plans: Array<{
-    can_ali_agreement: number;
-    plan_id: string;
-    rank: number;
-    user_id: string;
-    status: number;
-    name: string;
-    pic: string;
-    desc: string;
-    price: string;
-    update_time: number;
-    timing: {
-      timing_on: number;
-      timing_off: number;
-    };
-    pay_month: number;
-    show_price: string;
-    show_price_after_adjust: string;
-    has_coupon: number;
-    coupon: Array<any>;
-    favorable_price: number;
-    independent: number;
-    permanent: number;
-    can_buy_hide: number;
-    need_address: number;
-    product_type: number;
-    sale_limit_count: number;
-    need_invite_code: boolean;
-    bundle_stock: number;
-    bundle_sku_select_count: number;
-    config: {};
-    has_plan_config: number;
-    expire_time: number;
-    sku_processed: Array<any>;
-    rankType: number;
-  }>;
-  current_plan: {
-    can_ali_agreement: number;
-    plan_id: string;
-    rank: number;
-    user_id: string;
-    status: number;
-    name: string;
-    pic: string;
-    desc: string;
-    price: string;
-    update_time: number;
-    timing: {
-      timing_on: number;
-      timing_off: number;
-    };
-    pay_month: number;
-    show_price: string;
-    show_price_after_adjust: string;
-    has_coupon: number;
-    coupon: Array<any>;
-    favorable_price: number;
-    independent: number;
-    permanent: number;
-    can_buy_hide: number;
-    need_address: number;
-    product_type: number;
-    sale_limit_count: number;
-    need_invite_code: boolean;
-    bundle_stock: number;
-    bundle_sku_select_count: number;
-    config: {};
-    has_plan_config: number;
-    expire_time: number;
-    sku_processed: Array<any>;
-    rankType: number;
-  };
+  sponsor_plans: PlanDetails[];
+  current_plan: PlanDetails;
   all_sum_amount: string;
   first_pay_time: number;
   last_pay_time: number;
@@ -109,6 +39,20 @@ export interface SponsorDetails {
     avatar: string;
     user_private_id: string;
   };
+}
+
+export interface PlanDetails {
+  name: string;
+  plan_id: string;
+  price: string;
+  pic: string;
+  expire_time: number;
+  update_time: number;
+  sku_processed: unknown[];
+  rank: number;
+  // NOTE: 字段的命名风格为什么不能统一一下🙃
+  rankType: number;
+  status: number;
 }
 
 export interface OrderDetails {
