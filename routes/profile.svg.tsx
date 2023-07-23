@@ -24,8 +24,8 @@ export default eventHandler(async e => {
       [{ avatar: user.cover !== '' ? user.cover : user.avatar }],
       [width, height - 85]
     )
-  )[0];
-  const avatarUrl = (await resolveAvatars([user], [64, 64]))[0];
+  )[0].avatar;
+  const avatarUrl = (await resolveAvatars([user], [64, 64]))[0].avatar;
 
   const fontFamily = `-apple-system,Arial,Verdana,"Hiragino Sans GB","Microsoft JhengHei","Microsoft YaHei",sans-serif`;
   class SVG extends Component {
