@@ -21,11 +21,11 @@ export default eventHandler(async e => {
 
   const coverUrl = (
     await resolveAvatars(
-      [user.cover !== '' ? user.cover : user.avatar],
+      [{ avatar: user.cover !== '' ? user.cover : user.avatar }],
       [width, height - 85]
     )
   )[0];
-  const avatarUrl = (await resolveAvatars([user.avatar], [64, 64]))[0];
+  const avatarUrl = (await resolveAvatars([user], [64, 64]))[0];
 
   const fontFamily = `-apple-system,Arial,Verdana,"Hiragino Sans GB","Microsoft JhengHei","Microsoft YaHei",sans-serif`;
   class SVG extends Component {
@@ -162,6 +162,7 @@ export default eventHandler(async e => {
     }
   }
 
+  e.node.res.appendHeader('accept-encoding', 'br');
   e.node.res.appendHeader('content-type', 'image/svg+xml');
   return renderSSR(SVG);
 });

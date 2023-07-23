@@ -37,15 +37,26 @@ export async function request<T>(u: string, params: any): Promise<T> {
   });
 }
 
-export function resolveAvatars(urls: string[], size?: number[]) {
+export function resolveAvatars(
+  users: {
+    user_id?: string;
+    avatar: string;
+  }[],
+  size?: number[]
+) {
   return Promise.all(
-    urls.map(async u => {
+    users.map(async u => {
       const sizeStr =
         size && size.length == 2
           ? `?imageView2/1/w/${size[0]}/h/${size[1]}`
           : '';
-      const data = await fetch(u + sizeStr).then(resp => resp.arrayBuffer());
-      return 'data:image/jpeg;base64,' + base64(new Uint8Array(data));
+      const data = await fetch(u.avatar + sizeStr).then(resp =>
+        resp.arrayBuffer()
+      );
+      return {
+        user_id: u.user_id,
+        avatar: 'data:image/jpeg;base64,' + base64(new Uint8Array(data))
+      };
     })
   );
 }
