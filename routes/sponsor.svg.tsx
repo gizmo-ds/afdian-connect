@@ -1,5 +1,5 @@
 import { querySponsor } from '@/afdian/api';
-import { h, renderSSR, jsx, Component } from 'nano-jsx';
+import { h, renderSSR, Component } from 'nano-jsx';
 import { resolveAvatars, strLen } from '@/afdian/helpers';
 import { tiers } from '@/afdian/sponsor-tiers';
 import { SponsorTier } from '@/afdian/types';
