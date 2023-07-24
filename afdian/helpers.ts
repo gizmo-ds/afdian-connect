@@ -60,3 +60,9 @@ export function resolveAvatars(
     })
   );
 }
+
+export function strLen(str: string) {
+  return str
+    .split('')
+    .reduce((acc, c) => acc + (c.charCodeAt(0) > 255 ? 2 : 1), 0);
+}

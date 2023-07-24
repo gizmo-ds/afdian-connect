@@ -45,6 +45,7 @@ export interface PlanDetails {
   name: string;
   plan_id: string;
   price: string;
+  show_price: string;
   pic: string;
   expire_time: number;
   update_time: number;
@@ -93,4 +94,15 @@ export interface GetProfileResult {
       };
     };
   };
+}
+
+export interface SponsorTier {
+  title: string;
+  badge: SponsorBadge;
+  sponsors?: SponsorDetails[];
+}
+export interface SponsorBadge {
+  avatarSize: number;
+  showName?: boolean;
+  padding?: number;
 }
