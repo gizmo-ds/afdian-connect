@@ -1,6 +1,14 @@
+<div align="center">
+
 # afdian-connect
 
-WIP
+[![爱发电](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fafdian.net%2Fapi%2Fuser%2Fget-profile%3Fuser_id%3D75e549844b5111ed8df552540025c377&query=%24.data.user.name&label=%E7%88%B1%E5%8F%91%E7%94%B5&color=%23946ce6)](https://afdian.net/a/gizmo)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-%E2%9D%A4%EF%B8%8F-blue?logo=kofi&color=%23fff)](https://ko-fi.com/gizmo_)
+[![License](https://img.shields.io/github/license/gizmo-ds/afdian-connect)](./LICENSE)
+
+一些爱发电缺少的功能,
+
+</div>
 
 ## 特性
 
@@ -8,15 +16,18 @@ WIP
 - [x] [赞助者展示 SVG](#赞助者展示-svg)
 - [x] [赞助宣传 SVG](#赞助宣传-svg)
 - [ ] Discord 集成
+  - [ ] Discord 用户绑定
   - [ ] 自动分配身份组
   - [ ] WebHook
 
-## 自己部署
+## 自己部署 (免费)
 
-| Name        | Deploy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Vercel      | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgizmo-ds%2Fafdian-connect&env=AFDIAN_TOKEN,AFDIAN_USER_ID,AFDIAN_USER,SPONSOR_TIERS_UPDATE_URL&envDescription=Token%E5%92%8CUserID%E5%8F%AF%E4%BB%A5%E5%9C%A8%E7%88%B1%E5%8F%91%E7%94%B5%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E9%9D%A2%E6%9D%BF%E8%8E%B7%E5%8F%96,AFDIAN_USER%E4%B8%BA%E4%B8%BB%E9%A1%B5%E7%BD%91%E5%9D%80%E5%90%8E%E9%9D%A2%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%83%A8%E5%88%86&envLink=https%3A%2F%2Fgithub.com%2Fgizmo-ds%2Fafdian-connect%23%E8%87%AA%E5%B7%B1%E9%83%A8%E7%BD%B2) |
-| Deno Deploy | [Documentation](https://nitro.unjs.io/deploy/providers/deno) [Example](.github/workflows/deno-deploy.yml)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Name        | Deploy                                                                                                              |
+| ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| Vercel      | [![Deploy with Vercel](https://vercel.com/button)](https://gg.gg/afdian-connect-vercel-deploy)                      |
+| Deno Deploy | [Deploy to Deno Deploy](https://nitro.unjs.io/deploy/providers/deno) / [Example](.github/workflows/deno-deploy.yml) |
+| Cloudflare  | [Deploy to Cloudflare](https://nitro.unjs.io/deploy/providers/cloudflare)                                           |
+| Netlify     | [Deploy to Netlify](https://nitro.unjs.io/deploy/providers/netlify)                                                 |
 
 环境变量:
 
