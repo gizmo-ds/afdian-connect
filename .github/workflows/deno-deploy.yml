@@ -25,6 +25,7 @@ jobs:
       - run: pnpm build
         env:
           NITRO_PRESET: deno-deploy
+          SPONSOR_TIERS_UPDATE_URL: ${{ secrets.SPONSOR_TIERS_UPDATE_URL }}
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
