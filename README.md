@@ -24,7 +24,7 @@
 
 | Name        | Deploy                                                                                                              |
 | ----------- | ------------------------------------------------------------------------------------------------------------------- |
-| Vercel      | [![Deploy with Vercel](https://vercel.com/button)](http://gg.gg/15thba)                                             |
+| Vercel      | [![Deploy with Vercel](https://vercel.com/button)](http://gg.gg/15tho7)                                             |
 | Deno Deploy | [Deploy to Deno Deploy](https://nitro.unjs.io/deploy/providers/deno) / [Example](.github/workflows/deno-deploy.yml) |
 | Cloudflare  | [Deploy to Cloudflare](https://nitro.unjs.io/deploy/providers/cloudflare)                                           |
 | Netlify     | [Deploy to Netlify](https://nitro.unjs.io/deploy/providers/netlify)                                                 |

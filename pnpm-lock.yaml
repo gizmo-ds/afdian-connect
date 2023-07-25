@@ -8,6 +8,9 @@ dependencies:
   base64-js:
     specifier: ^1.5.1
     version: 1.5.1
+  core-js:
+    specifier: ^3.31.1
+    version: 3.31.1
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
@@ -1091,6 +1094,11 @@ packages:
 
   /cookie-es@1.0.0:
     resolution: {integrity: sha512-mWYvfOLrfEc996hlKcdABeIiPHUPC6DM2QYZdGGOvhOTbA3tjm2eBwqlJpoFdjC89NI4Qt6h0Pu06Mp+1Pj5OQ==}
+    dev: false
+
+  /core-js@3.31.1:
+    resolution: {integrity: sha512-2sKLtfq1eFST7l7v62zaqXacPc7uG8ZAya8ogijLhTtaKNcpzpB4TMoTw2Si+8GYKRwFPMMtUT0263QFWFfqyQ==}
+    requiresBuild: true
     dev: false
 
   /core-util-is@1.0.3:
