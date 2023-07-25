@@ -34,7 +34,7 @@
 - `AFDIAN_TOKEN` - 在爱发电的 [开发者面板](https://afdian.net/dashboard/dev) 获得
 - `AFDIAN_USER_ID` - 在爱发电的 [开发者面板](https://afdian.net/dashboard/dev) 获得
 - `AFDIAN_USER` - 爱发电的 [创作设置](https://afdian.net/setting/creator) 的 `主页网址` 的能修改的部分
-- `SPONSOR_TIERS_UPDATE_URL` - 可选, 如果存在, 构建时会替换`afdian/sponsor-tiers.ts`文件. 写法可参考`afdian/sponsor-tiers-example.ts`
+- `SPONSOR_TIERS_UPDATE_URL` - 可选, 如果存在并且是可解析的 URL, 构建时会替换`afdian/sponsor-tiers.ts`文件. 写法可参考`afdian/sponsor-tiers-example.ts`
 
 ## 赞助宣传 SVG
 
