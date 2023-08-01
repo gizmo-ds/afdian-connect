@@ -54,6 +54,7 @@
 - `hide_fans` - 是否隐藏月粉丝数, 默认为`false`
 - `width` - 宽度, 默认为`640`
 - `height` - 高度, 默认为`225`
+- `maxage` - 浏览器缓存时间, 单位为秒, 默认为`7200`
 
 [![Gizmo's Profile](https://afdian-connect.deno.dev/profile.svg)](https://afdian.net/a/gizmo)
 
@@ -66,5 +67,6 @@
 支持的选项:
 
 - `width` - 宽度, 默认为`800`
+- `maxage` - 浏览器缓存时间, 单位为秒, 默认为`7200`
 
-![打钱!](https://afdian-connect.deno.dev/sponsor.svg)
+[![金主爸爸](https://afdian-connect.deno.dev/sponsor.svg)](https://afdian.net/a/gizmo)
