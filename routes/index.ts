@@ -1,5 +1,5 @@
-import * as pkg from '@/package.json';
+import { homepage } from '@/package.json';
 
 export default eventHandler(async e => {
-  await sendRedirect(e, pkg.homepage, 301);
+  await sendRedirect(e, homepage, 301);
 });

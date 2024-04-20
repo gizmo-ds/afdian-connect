@@ -19,6 +19,7 @@
   "dependencies": {
     "base64-js": "^1.5.1",
     "core-js": "^3.31.1",
+    "discord-interactions": "^3.4.0",
     "lodash-es": "^4.17.21",
     "nano-jsx": "^0.0.37",
     "nitropack": "latest",
