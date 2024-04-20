@@ -1,15 +1,16 @@
-export interface WebHookRequest {
+interface BaseRequest {
   ec: number;
   em: string;
+}
+
+export interface WebHookRequest extends BaseRequest {
   data: {
     type: string;
     order: OrderDetails;
   };
 }
 
-export interface QueryOrderResult {
-  ec: number;
-  em: string;
+export interface QueryOrderResult extends BaseRequest {
   data: {
     list: OrderDetails[];
     total_count: number;
@@ -17,9 +18,7 @@ export interface QueryOrderResult {
   };
 }
 
-export interface SponsorResult {
-  ec: number;
-  em: string;
+export interface SponsorResult extends BaseRequest {
   data: {
     list: SponsorDetails[];
     total_count: number;
@@ -78,9 +77,7 @@ export interface OrderDetails {
   address_address: string; // 收件人地址
 }
 
-export interface GetProfileResult {
-  ec: number;
-  em: string;
+export interface GetProfileResult extends BaseRequest {
   data: {
     user: {
       user_id: string;
