@@ -6,6 +6,7 @@ import { EmbedField } from '@/discord/types';
 
 export default eventHandler(async e => {
   if (!DISCORD_WEBHOOK_URL || DISCORD_WEBHOOK_URL === '') return { ec: 200 };
+  if (!WEBHOOK_SECRET || WEBHOOK_SECRET === '') return { ec: 200 };
 
   const query = new URL(e.node.req.url, `http://${e.node.req.headers['host']}`)
     .searchParams;
@@ -14,6 +15,8 @@ export default eventHandler(async e => {
 
   const data: WebHookRequest = JSON.parse(body);
   const order = data.data.order;
+  // TODO: 暂时只支持赞助, 售卖方案目前不支持
+  if (order.product_type !== 0) return { ec: 200 };
 
   let user = {
     name: '爱发电用户',
@@ -21,7 +24,8 @@ export default eventHandler(async e => {
     user_id: order.user_id
   };
   try {
-    user = (await getProfile(order.user_id)).data.user;
+    const _user = (await getProfile(order.user_id)).data.user;
+    if (_user) user = _user;
   } catch (error) {}
 
   const fields: EmbedField[] = [];
