@@ -7,9 +7,9 @@ export async function queryOrder(page: number = 1, orders?: string[] | string) {
     {
       page,
       out_trade_no: orders
-        ? typeof orders === 'string'
-          ? orders
-          : orders.join(',')
+        ? Array.isArray(orders)
+          ? orders.join(',')
+          : orders
         : undefined
     }
   );
@@ -26,9 +26,9 @@ export async function querySponsor(
       page,
       per_page,
       user_id: user_ids
-        ? typeof user_ids === 'string'
-          ? user_ids
-          : user_ids.join(',')
+        ? Array.isArray(user_ids)
+          ? user_ids.join(',')
+          : user_ids
         : undefined
     }
   );
