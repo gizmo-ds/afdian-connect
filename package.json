@@ -6,6 +6,7 @@
     "name": "Gizmo",
     "url": "https://github.com/gizmo-ds"
   },
+  "packageManager": "pnpm@9.0.4",
   "license": "MIT",
   "scripts": {
     "prepare": "npx nitropack prepare",
