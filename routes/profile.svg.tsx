@@ -1,6 +1,6 @@
-import { getProfileBySlug } from '@/afdian/api';
-import { resolveAvatars } from '@/afdian/helpers';
-import { AFDIAN_USER } from '@/utils/secret';
+import { getProfileBySlug } from '../afdian/api';
+import { resolveAvatars } from '../afdian/helpers';
+import { AFDIAN_USER } from '../utils/secret';
 import { Component, h, jsx, renderSSR } from 'nano-jsx';
 
 export default eventHandler(async e => {

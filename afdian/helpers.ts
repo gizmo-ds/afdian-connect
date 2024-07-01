@@ -1,5 +1,5 @@
 import { Md5 } from 'ts-md5';
-import { AFDIAN_TOKEN, AFDIAN_USER_ID } from '@/utils/secret';
+import { AFDIAN_TOKEN, AFDIAN_USER_ID } from '../utils/secret';
 import { fromByteArray as base64 } from 'base64-js';
 
 function sign(params: Record<string, any>) {

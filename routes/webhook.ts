@@ -1,8 +1,8 @@
-import { getProfile } from '@/afdian/api';
-import { WebHookRequest } from '@/afdian/types';
-import { ExecuteWebhook } from '@/discord/webhook';
-import { DISCORD_WEBHOOK_URL, WEBHOOK_SECRET } from '@/utils/secret';
-import { EmbedField } from '@/discord/types';
+import { getProfile } from '../afdian/api';
+import { WebHookRequest } from '../afdian/types';
+import { ExecuteWebhook } from '../discord/webhook';
+import { DISCORD_WEBHOOK_URL, WEBHOOK_SECRET } from '../utils/secret';
+import { EmbedField } from '../discord/types';
 
 export default eventHandler(async e => {
   if (!DISCORD_WEBHOOK_URL || DISCORD_WEBHOOK_URL === '') return { ec: 200 };

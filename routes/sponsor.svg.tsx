@@ -1,8 +1,8 @@
-import { querySponsor } from '@/afdian/api';
+import { querySponsor } from '../afdian/api';
 import { h, renderSSR, Component } from 'nano-jsx';
-import { resolveAvatars, strLen } from '@/afdian/helpers';
-import { tiers } from '@/afdian/sponsor-tiers';
-import { SponsorTier } from '@/afdian/types';
+import { resolveAvatars, strLen } from '../afdian/helpers';
+import { tiers } from '../afdian/sponsor-tiers';
+import { SponsorTier } from '../afdian/types';
 import { chunk } from 'lodash-es';
 
 export default eventHandler(async e => {
