@@ -12,7 +12,7 @@
     "prepare": "npx nitropack prepare",
     "dev:nitro": "npx nitropack dev",
     "dev": "run-s update-sponsor-tiers dev:nitro",
-    "update-sponsor-tiers": "esno scripts/update-sponsor-tiers.ts",
+    "update-sponsor-tiers": "node scripts/update-sponsor-tiers.mjs",
     "build:nitro": "npx nitropack build",
     "build": "run-s update-sponsor-tiers build:nitro",
     "preview": "node .output/server/index.mjs"
