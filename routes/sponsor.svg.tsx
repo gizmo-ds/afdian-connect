@@ -4,6 +4,7 @@ import { resolveAvatars, strLen } from '../afdian/helpers';
 import { tiers } from '../afdian/sponsor-tiers';
 import { SponsorTier } from '../afdian/types';
 import { chunk } from 'lodash-es';
+import { svgTextEllipsis } from '../utils/svg';
 
 export default eventHandler(async e => {
   const query = new URL(e.node.req.url, `http://${e.node.req.headers['host']}`)
@@ -99,9 +100,7 @@ export default eventHandler(async e => {
                   font-family={this.fontFamily}
                   font-weight="300"
                 >
-                  {strLen(s.user.name) > 14
-                    ? s.user.name.slice(0, 5) + '...'
-                    : s.user.name}
+                  {svgTextEllipsis(s.user.name, 9)}
                 </tspan>
               </text>
             );
