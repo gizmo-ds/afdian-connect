@@ -34,6 +34,7 @@
 - `AFDIAN_TOKEN` - 在爱发电的 [开发者面板](https://afdian.net/dashboard/dev) 获得
 - `AFDIAN_USER_ID` - 在爱发电的 [开发者面板](https://afdian.net/dashboard/dev) 获得
 - `AFDIAN_USER` - 爱发电的 [创作设置](https://afdian.net/setting/creator) 的 `主页网址` 的能修改的部分
+- `AFDIAN_URL_BASE` - 可选, 爱发电的 API 地址, 默认为`https://afdian.com`
 - `SPONSOR_TIERS_UPDATE_URL` - 可选, 如果存在并且是可解析的 URL, 构建时会替换`afdian/sponsor-tiers.ts`文件. 写法可参考`afdian/sponsor-tiers-example.ts`
 - `WEBHOOK_SECRET` - 可选, 使用 WebHook 时需要的密钥, 所有没带此密钥的请求都会被拒绝.
 - `DISCORD_WEBHOOK_URL` - 可选, Discord WebHook 的 URL, 用于将赞助信息发送到 Discord 频道.
