@@ -45,7 +45,7 @@ export default eventHandler(async e => {
           author: {
             name: user.name,
             icon_url: user.avatar + '?imageView2/1/w/64/h/64',
-            url: new URL(`/user/${user.user_id}`, 'https://afdian.net').href
+            url: new URL(`/user/${user.user_id}`, 'https://afdian.com').href
           },
           fields
         }
