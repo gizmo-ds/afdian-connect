@@ -18,7 +18,7 @@
 - [ ] Discord 集成
   - [ ] Discord 用户绑定
   - [ ] 自动分配身份组
-  - [x] WebHook
+  - [x] [WebHook](#discord-webhook)
 
 ## 自己部署 (免费)
 
