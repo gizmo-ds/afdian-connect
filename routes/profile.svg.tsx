@@ -15,6 +15,7 @@ export default eventHandler(async e => {
   const width = parseInt(query.get('width') ?? '640');
   const height = parseInt(query.get('height') ?? '225');
   const maxage = parseInt(query.get('maxage') ?? '7200');
+  const button_text = query.get('button_text') ?? '赞助';
 
   const profile = await getProfileBySlug(slug);
   const user = profile.data.user;
@@ -125,7 +126,7 @@ export default eventHandler(async e => {
           />
           <text x={width - 85} y={height - 37}>
             <tspan fill="#fff" font-size="16px" font-family={fontFamily}>
-              赞助
+              {button_text}
             </tspan>
           </text>
 
