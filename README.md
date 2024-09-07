@@ -31,9 +31,9 @@
 
 环境变量:
 
-- `AFDIAN_TOKEN` - 在爱发电的 [开发者面板](https://afdian.net/dashboard/dev) 获得
-- `AFDIAN_USER_ID` - 在爱发电的 [开发者面板](https://afdian.net/dashboard/dev) 获得
-- `AFDIAN_USER` - 爱发电的 [创作设置](https://afdian.net/setting/creator) 的 `主页网址` 的能修改的部分
+- `AFDIAN_TOKEN` - 在爱发电的 [开发者面板](https://afdian.com/dashboard/dev) 获得
+- `AFDIAN_USER_ID` - 在爱发电的 [开发者面板](https://afdian.com/dashboard/dev) 获得
+- `AFDIAN_USER` - 爱发电的 [创作设置](https://afdian.com/setting/creator) 的 `主页网址` 的能修改的部分
 - `AFDIAN_URL_BASE` - 可选, 爱发电的 API 地址, 默认为`https://afdian.com`
 - `SPONSOR_TIERS_UPDATE_URL` - 可选, 如果存在并且是可解析的 URL, 构建时会替换`afdian/sponsor-tiers.ts`文件. 写法可参考`afdian/sponsor-tiers-example.ts`
 - `WEBHOOK_SECRET` - 可选, 使用 WebHook 时需要的密钥, 所有没带此密钥的请求都会被拒绝.
@@ -42,7 +42,7 @@
 ## 赞助宣传 SVG
 
 ```markdown
-[![Gizmo's Profile](https://afdian-connect.deno.dev/profile.svg)](https://afdian.com/a/gizmo)
+[![Gizmo's Profile](https://afdian-connect.deno.dev/profile.svg?slug=gizmo)](https://afdian.com/a/gizmo)
 ```
 
 官方网页嵌入功能的替代. 渲染为 SVG, 方便在 Markdown 等情况下使用.
@@ -58,14 +58,18 @@
 - `width` - 宽度, 默认为`640`
 - `height` - 高度, 默认为`225`
 - `maxage` - 浏览器缓存时间, 单位为秒, 默认为`7200`
+- `button_text` - 赞助按钮的文字, 默认为`赞助`.
 
-[![Gizmo's Profile](https://afdian-connect.deno.dev/profile.svg)](https://afdian.com/a/gizmo)
+[![Gizmo's Profile](https://afdian-connect.deno.dev/profile.svg?slug=gizmo)](https://afdian.com/a/gizmo)
 
 ## 赞助者展示 SVG
 
 ```markdown
 ![Sponsors](https://afdian-connect.deno.dev/sponsor.svg)
 ```
+
+> [!IMPORTANT]  
+> 仅能展示部署者的赞助信息, 需要展示自己的赞助信息请参考 [自己部署](#自己部署-免费) 部分.
 
 支持的选项:
 
