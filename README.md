@@ -12,7 +12,7 @@
 
 ## 特性
 
-- [ ] 赞助者展示页
+- [ ] ~~赞助者展示页~~
 - [x] [赞助者展示 SVG](#赞助者展示-svg)
 - [x] [赞助宣传 SVG](#赞助宣传-svg)
 - [ ] Discord 集成
@@ -45,6 +45,18 @@
 [![Gizmo's Profile](https://afdian-connect.deno.dev/profile.svg?slug=gizmo)](https://afdian.com/a/gizmo)
 ```
 
+或
+
+```html
+<a href="https://afdian.com/a/gizmo">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://afdian-connect.deno.dev/profile.svg?slug=gizmo&bg_color=%230d1117&text_color=%23dedbd7&border_color=%232e343d" />
+    <source media="(prefers-color-scheme: light)" srcset="https://afdian-connect.deno.dev/profile.svg?slug=gizmo" />
+    <img alt="Gizmo's Profile" src="https://afdian-connect.deno.dev/profile.svg?slug=gizmo" />
+  </picture>
+</a>
+```
+
 官方网页嵌入功能的替代. 渲染为 SVG, 方便在 Markdown 等情况下使用.
 
 支持的选项:
@@ -60,7 +72,13 @@
 - `maxage` - 浏览器缓存时间, 单位为秒, 默认为`7200`
 - `button_text` - 赞助按钮的文字, 默认为`赞助`.
 
-[![Gizmo's Profile](https://afdian-connect.deno.dev/profile.svg?slug=gizmo)](https://afdian.com/a/gizmo)
+<a href="https://afdian.com/a/gizmo">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://afdian-connect.deno.dev/profile.svg?slug=gizmo&bg_color=%230d1117&text_color=%23dedbd7&border_color=%232e343d" />
+    <source media="(prefers-color-scheme: light)" srcset="https://afdian-connect.deno.dev/profile.svg?slug=gizmo" />
+    <img alt="Gizmo's Profile" src="https://afdian-connect.deno.dev/profile.svg?slug=gizmo" />
+  </picture>
+</a>
 
 ## 赞助者展示 SVG
 
@@ -68,7 +86,7 @@
 ![Sponsors](https://afdian-connect.deno.dev/sponsor.svg)
 ```
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 仅能展示部署者的赞助信息, 需要展示自己的赞助信息请参考 [自己部署](#自己部署-免费) 部分.
 
 支持的选项:
